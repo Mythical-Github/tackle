@@ -3,7 +3,7 @@ from platform import platform
 
 
 @dataclass
-class HookCommand:
+class Command:
     executable: str
     executable_args: list[str]
 
@@ -42,14 +42,13 @@ class DependencyConfigStructure:
     config_spec_version: float
     config_version: float
     display_name: str
-    executable_name: str
-    executable_args: list[str]
+    command: Command
     sha_256_hash: str
     download_links: list[str]
     compatible_projects: list[Project]
     compatible_games: list[Game]
-    pre_hook_commands: list[HookCommand]
-    post_hook_commands: list[HookCommand]
+    pre_hook_commands: list[Command]
+    post_hook_commands: list[Command]
 
 
 @dataclass

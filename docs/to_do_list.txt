@@ -1,9 +1,18 @@
-
+cli options
+        create an offline installable package
+        takes in list of specific dependencies to install
+        takes in list of game names
+        takes in list of projects names
+        takes in a list of offline packages to install
+        reinstall option
+        generate new dependency folder setup
+        gen new project configs
+        gen new game configs
+        generate wrapper
 
 To Do:
     install dependencies for a specific game
     install dependencies for all games on a specific client/project
-    use click so a tui can be made with trogon
     offline install options (create offline installer)
     logging
     progress bars
@@ -23,4 +32,4 @@ Maybes:
 each folder should have 
     a toml file
     folder called dependencies for executables like redists
-    folder called scripts for post hooks
+    folder called scripts for hooks

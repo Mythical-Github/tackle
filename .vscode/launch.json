@@ -6,13 +6,26 @@
     "configurations": [
 
         {
-            "name": "tackle",
+            "name": "tackle_install_dependencies",
             "type": "debugpy",
             "request": "launch",
             "module": "tackle",
             "subProcess": true,
             "console": "externalTerminal",
-            "args": []
+            "args": [
+                "install_dependencies"
+            ]
+        },
+        {
+            "name": "tackle_tui",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "tackle",
+            "subProcess": true,
+            "console": "externalTerminal",
+            "args": [
+                "tui"
+            ]
         }
     ]
 }
