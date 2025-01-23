@@ -5,7 +5,7 @@ start_time = time.time()
 from tackle import cli
 from tackle import log
 from tackle.log_info import LOG_INFO
-from tackle.settings import SCRIPT_DIR
+from tackle.file_io import SCRIPT_DIR
 from tackle.customization import enable_vt100
 
 
