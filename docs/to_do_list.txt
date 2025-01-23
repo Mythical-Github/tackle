@@ -4,15 +4,23 @@ To Do:
     install dependencies for a specific game
     install dependencies for all games on a specific client/project
     use click so a tui can be made with trogon
-    offline install options
+    offline install options (create offline installer)
     logging
+    progress bars
+    exe takes in a list of clients/projects and or a list of games
+    track ones already installed, with an optional param to install anyways
 
 
 Later:
 
 
 Maybes:
+    new toml entry generator
     sh/bat generation from tui
-    dynamically populated from toml file
-    linux compatibility
+    dynamically populated entries
 
+
+each folder should have 
+    a toml file
+    folder called dependencies for executables like redists
+    folder called scripts for post hooks
