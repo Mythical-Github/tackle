@@ -1,11 +1,18 @@
 
 
 To Do:
+    install dependencies for a specific game
+    install dependencies for all games on a specific client/project
+    use click so a tui can be made with trogon
+    offline install options
+    logging
 
 
 Later:
 
 
 Maybes:
-
+    sh/bat generation from tui
+    dynamically populated from toml file
+    linux compatibility
 
