@@ -1,0 +1,11 @@
+
+[game_config_structure]
+config_spec_version = 1.0
+config_version = 1.0
+
+[game_config_structure.game_info]
+game_display_name = "Call of Duty: Advanced Warfare"
+
+[[game_config_structure.game_info.store_front_game_information]]
+store_display_name = "Steam"
+game_purchase_url = "https://store.steampowered.com/app/209650/Call_of_Duty_Advanced_Warfare__Gold_Edition/"
