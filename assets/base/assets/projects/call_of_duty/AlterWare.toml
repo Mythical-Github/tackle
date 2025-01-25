@@ -1,0 +1,16 @@
+
+[project_config_structure]
+config_spec_version = 1.0
+config_version = 1.0
+
+[project_config_structure.project_info]
+display_name = "Plutonium"
+home_page = "https://plutonium.pw/"
+git_repo_urls = ["https://github.com/plutoniummod"]
+community_urls = ["https://discord.gg/plutonium", "https://forum.plutonium.pw/"]
+documentation_urls = ["https://plutonium.pw/docs/"]
+
+[[project_config_structure.project_info.downloads_information]]
+file_display_name = "plutonium.exe"
+download_urls = ["https://cdn.plutonium.pw/updater/plutonium.exe"]
+os = "Windows"
