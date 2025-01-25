@@ -1,0 +1,30 @@
+
+[dependency_config_structure]
+config_spec_version = 1.0
+config_version = 1.0
+display_name = "VC++ 2010"
+sha_256_hash = "99dce3c841cc6028560830f7866c9ce2928c98cf3256892ef8e6cf755147b0d8"
+download_links = ["https://download.microsoft.com/download/1/6/5/165255E7-1014-4D0A-B094-B6A430A6BFFC/vcredist_x86.exe"]
+
+[dependency_config_structure.command]
+executable = "vcredist_2010_x86.exe"
+executable_args = ["/Q"]
+
+[[dependency_config_structure.compatible_projects]]
+display_name = "AlterWare"
+
+[[dependency_config_structure.compatible_games]]
+game_display_name = "Call of Duty: Modern Warfare II 2009"
+
+[[dependency_config_structure.compatible_games]]
+game_display_name = "Call of Duty: Modern Warfare III 2011"
+
+[[dependency_config_structure.compatible_games]]
+game_display_name = "Call of Duty: Black Ops III"
+
+[[dependency_config_structure.compatible_games]]
+game_display_name = "Call of Duty: Advanced Warfare"
+
+[[dependency_config_structure.compatible_games]]
+game_display_name = "Call of Duty: Ghosts"
+    
