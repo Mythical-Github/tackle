@@ -27,6 +27,7 @@ Maybes:
     new toml entry generator
     sh/bat generation from tui
     dynamically populated entries
+    check if hash exists already and output information if it does
 
 
 each folder should have 
