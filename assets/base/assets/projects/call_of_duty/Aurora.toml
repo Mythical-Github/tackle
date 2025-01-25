@@ -1,0 +1,16 @@
+
+[project_config_structure]
+config_spec_version = 1.0
+config_version = 1.0
+
+[project_config_structure.project_info]
+display_name = "Aurora"
+home_page = "https://auroramod.dev/"
+git_repo_urls = ["https://github.com/auroramod/"]
+community_urls = ["https://discord.com/invite/RzzXu5EVnh"]
+documentation_urls = ["https://docs.auroramod.dev/"]
+
+[[project_config_structure.project_info.downloads_information]]
+file_display_name = "h1-mod.exe"
+download_urls = ["https://github.com/auroramod/h1-mod/releases/latest/download/h1-mod.exe"]
+os = "Windows"
