@@ -1,0 +1,29 @@
+
+[dependency_config_structure]
+config_spec_version = 1.0
+config_version = 1.0
+display_name = "2008_x64"
+sha_256_hash = "baaaeddc17bcda8d20c0a82a9eb1247be06b509a820d65dda1342f4010bdb4a0"
+download_links = ["https://github.com/Mythical-Github/tackle_box/raw/refs/heads/main/redists/2008_x64.exe"]
+
+[dependency_config_structure.command]
+executable = "2008_x64.exe"
+executable_args = ["/install", "/quiet", "/norestart"]
+  
+[[dependency_config_structure.compatible_projects]]
+display_name = "Plutonium"
+  
+[[dependency_config_structure.compatible_projects]]
+display_name = "Aurora"
+
+[[dependency_config_structure.compatible_games]]
+game_display_name = "Call of Duty: World at War"
+
+[[dependency_config_structure.compatible_games]]
+game_display_name = "Call of Duty: Modern Warfare III 2011"
+
+[[dependency_config_structure.compatible_games]]
+game_display_name = "Call of Duty: Black Ops"
+
+[[dependency_config_structure.compatible_games]]
+game_display_name = "Call of Duty: Black Ops II"

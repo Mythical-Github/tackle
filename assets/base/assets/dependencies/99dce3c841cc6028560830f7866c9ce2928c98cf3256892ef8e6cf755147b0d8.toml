@@ -12,6 +12,9 @@ executable_args = ["/Q"]
 
 [[dependency_config_structure.compatible_projects]]
 display_name = "AlterWare"
+  
+[[dependency_config_structure.compatible_projects]]
+display_name = "Aurora"
 
 [[dependency_config_structure.compatible_games]]
 game_display_name = "Call of Duty: Modern Warfare II 2009"

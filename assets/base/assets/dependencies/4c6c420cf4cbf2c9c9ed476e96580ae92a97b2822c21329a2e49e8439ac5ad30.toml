@@ -1,0 +1,29 @@
+
+[dependency_config_structure]
+config_spec_version = 1.0
+config_version = 1.0
+display_name = "vcredist2015_2017_2019_x86"
+sha_256_hash = "4c6c420cf4cbf2c9c9ed476e96580ae92a97b2822c21329a2e49e8439ac5ad30"
+download_links = ["https://github.com/Mythical-Github/tackle_box/raw/refs/heads/main/redists/vcredist2015_2017_2019_x86.exe"]
+
+[dependency_config_structure.command]
+executable = "vcredist2015_2017_2019_x86.exe"
+executable_args = ["/install", "/quiet", "/norestart"]
+  
+[[dependency_config_structure.compatible_projects]]
+display_name = "Plutonium"
+  
+[[dependency_config_structure.compatible_projects]]
+display_name = "Aurora"
+
+[[dependency_config_structure.compatible_games]]
+game_display_name = "Call of Duty: World at War"
+
+[[dependency_config_structure.compatible_games]]
+game_display_name = "Call of Duty: Modern Warfare III 2011"
+
+[[dependency_config_structure.compatible_games]]
+game_display_name = "Call of Duty: Black Ops"
+
+[[dependency_config_structure.compatible_games]]
+game_display_name = "Call of Duty: Black Ops II"

@@ -3,7 +3,7 @@
 config_spec_version = 1.0
 config_version = 1.0
 display_name = "Example Dependency"
-sha_256_hash = "examplehash"
+sha_256_hash = "example_hash"
 download_links = ["https://example.com/download"]
 
 [dependency_config_structure.command]

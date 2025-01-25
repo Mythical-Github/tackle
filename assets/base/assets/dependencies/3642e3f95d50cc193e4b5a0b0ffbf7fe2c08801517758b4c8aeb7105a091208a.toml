@@ -1,0 +1,30 @@
+
+[dependency_config_structure]
+config_spec_version = 1.0
+config_version = 1.0
+display_name = "2022_VC_redist"
+sha_256_hash = "3642e3f95d50cc193e4b5a0b0ffbf7fe2c08801517758b4c8aeb7105a091208a"
+download_links = ["https://github.com/Mythical-Github/tackle_box/raw/refs/heads/main/redists/2022_VC_redist.exe"]
+
+[dependency_config_structure.command]
+executable = "2022_VC_redist.x64.exe"
+executable_args = ["/install", "/quiet", "/norestart"]
+execution_method = ["wait"]
+  
+[[dependency_config_structure.compatible_projects]]
+display_name = "Plutonium"
+  
+[[dependency_config_structure.compatible_projects]]
+display_name = "Aurora"
+
+[[dependency_config_structure.compatible_games]]
+game_display_name = "Call of Duty: World at War"
+
+[[dependency_config_structure.compatible_games]]
+game_display_name = "Call of Duty: Modern Warfare III 2011"
+
+[[dependency_config_structure.compatible_games]]
+game_display_name = "Call of Duty: Black Ops"
+
+[[dependency_config_structure.compatible_games]]
+game_display_name = "Call of Duty: Black Ops II"

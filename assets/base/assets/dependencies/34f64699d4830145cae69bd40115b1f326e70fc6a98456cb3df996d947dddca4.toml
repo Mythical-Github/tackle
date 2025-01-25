@@ -1,0 +1,30 @@
+
+[dependency_config_structure]
+config_spec_version = 1.0
+config_version = 1.0
+display_name = "2008_x64"
+sha_256_hash = "34f64699d4830145cae69bd40115b1f326e70fc6a98456cb3df996d947dddca4"
+download_links = ["https://github.com/Mythical-Github/tackle_box/raw/refs/heads/main/redists/DirectX.exe"]
+
+[dependency_config_structure.command]
+executable = "DirectX.exe"
+executable_args = ["/Q"]
+execution_method = ["wait"]
+  
+[[dependency_config_structure.compatible_projects]]
+display_name = "Plutonium"
+  
+[[dependency_config_structure.compatible_projects]]
+display_name = "Aurora"
+
+[[dependency_config_structure.compatible_games]]
+game_display_name = "Call of Duty: World at War"
+
+[[dependency_config_structure.compatible_games]]
+game_display_name = "Call of Duty: Modern Warfare III 2011"
+
+[[dependency_config_structure.compatible_games]]
+game_display_name = "Call of Duty: Black Ops"
+
+[[dependency_config_structure.compatible_games]]
+game_display_name = "Call of Duty: Black Ops II"

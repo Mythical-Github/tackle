@@ -1,0 +1,30 @@
+
+[dependency_config_structure]
+config_spec_version = 1.0
+config_version = 1.0
+display_name = "DirectXA"
+sha_256_hash = "ebe949c3bf16d80e755790adcc7c15cf69f5b63c1cac8cb7a1fc986ba429ab05"
+download_links = ["https://github.com/Mythical-Github/tackle_box/raw/refs/heads/main/redists/DirectXA.exe"]
+
+[dependency_config_structure.command]
+executable = "DirectXA.exe"
+executable_args = ["/VERYSILENT", "/SUPPRESSMSGBOXES", "/NORESTART", "/SP-"]
+execution_method = ["wait"]
+  
+[[dependency_config_structure.compatible_projects]]
+display_name = "Plutonium"
+  
+[[dependency_config_structure.compatible_projects]]
+display_name = "Aurora"
+
+[[dependency_config_structure.compatible_games]]
+game_display_name = "Call of Duty: World at War"
+
+[[dependency_config_structure.compatible_games]]
+game_display_name = "Call of Duty: Modern Warfare III 2011"
+
+[[dependency_config_structure.compatible_games]]
+game_display_name = "Call of Duty: Black Ops"
+
+[[dependency_config_structure.compatible_games]]
+game_display_name = "Call of Duty: Black Ops II"
