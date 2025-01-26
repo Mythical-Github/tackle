@@ -11,28 +11,28 @@ def cli():
 @cli.command(name='install_dependencies')
 
 @click.option(
-    '--project_names',
+    '--project_configs',
     default=[],
-    help='A list of project names to install dependencies for.',
+    help='A list of project config names/paths to install dependencies for.',
     multiple=True
 )
 
 @click.option(
-    '--game_names',
+    '--game_configs',
     default=[],
-    help='A list of game names to install dependencies for.',
+    help='A list of game config names/paths to install dependencies for.',
     multiple=True
 )
 
 @click.option(
-    '--specific_dependencies_names',
+    '--dependencies_configs',
     default=[],
-    help='A list of dependency config names to install dependencies from.',
+    help='A list of dependency config names/paths to install dependencies from.',
     multiple=True
 )
 
 @click.option(
-    '--offline_install_packages',
+    '--install_offline_packages',
     default=[],
     help='A list of paths to offline installable packages generated from tackle to install.',
     multiple=True
@@ -58,9 +58,9 @@ def cli():
 
 
 def install_dependencies(
-    project_names: list[str],
-    game_names: list[str],
-    specific_dependencies_names: list[str],
+    project_configs: list[str],
+    game_configs: list[str],
+    dependencies_configs: list[str],
     offline_install_packages: list[str],
     create_offline_packages: list[str],
     generate_wrappers: bool,
@@ -69,46 +69,46 @@ def install_dependencies(
     print(str(reinstall_dependencies))
 
 
-@cli.command(name='generate_new_dependency_directory')
+@cli.command(name='generate_dependency_config')
 
 @click.option(
-    '--directories',
+    '--configs',
     default=[],
-    help='A list of directories to create new dependency setups.',
+    help='A list of config names/paths to create dependency configs at.',
     multiple=True
 )
 
 
-def generate_new_dependency_directory(directories):
-    for directory in directories:
-        print(directory)
+def generate_dependency_config(configs):
+    for config in configs:
+        print(config)
 
 
-@cli.command(name='generate_new_project_config')
+@cli.command(name='generate_project_config')
 
 @click.option(
     '--project_config_paths',
     default=[],
-    help='A list of paths to create new project configs at.',
+    help='A list of names/paths to create project configs at.',
     multiple=True
 )
 
 
-def generate_new_project_config(project_config_paths):
+def generate_project_config(project_config_paths):
     for project_config_path in project_config_paths:
         print(project_config_path)
 
 
-@cli.command(name='generate_new_game_config')
+@cli.command(name='generate_game_config')
 
 @click.option(
     '--game_config_paths',
     default=[],
-    help='A list of paths to create new games configs at.',
+    help='A list of names/paths to create games configs at.',
     multiple=True
 )
 
 
-def generate_new_game_config(game_config_paths):
+def generate_game_config(game_config_paths):
     for game_config_path in game_config_paths:
         print(game_config_path)
