@@ -26,6 +26,19 @@
             "args": [
                 "tui"
             ]
+        },
+        {
+            "name": "tackle_generate_depedency_configs",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "tackle",
+            "subProcess": true,
+            "console": "externalTerminal",
+            "args": [
+                "generate_dependency_configs",
+                "--configs",
+                "C:/Users/Mythical/Desktop/test.toml"
+            ]
         }
     ]
 }

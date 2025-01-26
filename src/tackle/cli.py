@@ -1,5 +1,11 @@
+import os
+import shutil
+
 import click
 from trogon import tui
+
+from tackle.log import logger
+from tackle.file_io import SCRIPT_DIR
 
 
 @tui()
@@ -69,7 +75,7 @@ def install_dependencies(
     print(str(reinstall_dependencies))
 
 
-@cli.command(name='generate_dependency_config')
+@cli.command(name='generate_dependency_configs')
 
 @click.option(
     '--configs',
@@ -79,12 +85,34 @@ def install_dependencies(
 )
 
 
-def generate_dependency_config(configs):
+def generate_dependency_configs(configs):
+    template_config = os.path.normpath(f'{SCRIPT_DIR}/assets/template_files/dependency.toml')
+    if not os.path.isfile(template_config):
+        raise FileNotFoundError()
     for config in configs:
-        print(config)
+        if os.path.isabs(config):
+            os.makedirs(os.path.dirname(os.path.normpath(config)), exist_ok=True)
+            if os.path.isfile(config):
+                warning_message = f'This following config already exists, and will not be recreated: "{config}"'
+                raise Warning(warning_message)
+            else:
+                shutil.copy(template_config, config)
+                success_message = f'This following config was created from the template config: "{config}"'
+                logger.log_message(success_message)
+        else:
+            os.makedirs(os.path.dirname(os.path.normpath(config)), exist_ok=True)
+            if os.path.isfile(config):
+                warning_message = f'This following config already exists, and will not be recreated: "{config}"'
+                logger.log_message(warning_message)
+                raise Warning(warning_message)
+            else:
+                new_config_path = os.path.normpath(f'{SCRIPT_DIR}/{config}')
+                shutil.copy(template_config, new_config_path)
+                success_message = f'This following config was created from the template config: "{new_config_path}"'
+                logger.log_message(success_message)
 
 
-@cli.command(name='generate_project_config')
+@cli.command(name='generate_project_configs')
 
 @click.option(
     '--project_config_paths',
@@ -94,12 +122,34 @@ def generate_dependency_config(configs):
 )
 
 
-def generate_project_config(project_config_paths):
-    for project_config_path in project_config_paths:
-        print(project_config_path)
+def generate_project_configs(configs):
+    template_config = os.path.normpath(f'{SCRIPT_DIR}/assets/template_files/project.toml')
+    if not os.path.isfile(template_config):
+        raise FileNotFoundError()
+    for config in configs:
+        if os.path.isabs(config):
+            os.makedirs(os.path.dirname(os.path.normpath(config)), exist_ok=True)
+            if os.path.isfile(config):
+                warning_message = f'This following config already exists, and will not be recreated: "{config}"'
+                raise Warning(warning_message)
+            else:
+                shutil.copy(template_config, config)
+                success_message = f'This following config was created from the template config: "{config}"'
+                logger.log_message(success_message)
+        else:
+            os.makedirs(os.path.dirname(os.path.normpath(config)), exist_ok=True)
+            if os.path.isfile(config):
+                warning_message = f'This following config already exists, and will not be recreated: "{config}"'
+                logger.log_message(warning_message)
+                raise Warning(warning_message)
+            else:
+                new_config_path = os.path.normpath(f'{SCRIPT_DIR}/{config}')
+                shutil.copy(template_config, new_config_path)
+                success_message = f'This following config was created from the template config: "{new_config_path}"'
+                logger.log_message(success_message)
 
 
-@cli.command(name='generate_game_config')
+@cli.command(name='generate_game_configs')
 
 @click.option(
     '--game_config_paths',
@@ -109,6 +159,28 @@ def generate_project_config(project_config_paths):
 )
 
 
-def generate_game_config(game_config_paths):
-    for game_config_path in game_config_paths:
-        print(game_config_path)
+def generate_game_configs(configs):
+    template_config = os.path.normpath(f'{SCRIPT_DIR}/assets/template_files/game.toml')
+    if not os.path.isfile(template_config):
+        raise FileNotFoundError()
+    for config in configs:
+        if os.path.isabs(config):
+            os.makedirs(os.path.dirname(os.path.normpath(config)), exist_ok=True)
+            if os.path.isfile(config):
+                warning_message = f'This following config already exists, and will not be recreated: "{config}"'
+                raise Warning(warning_message)
+            else:
+                shutil.copy(template_config, config)
+                success_message = f'This following config was created from the template config: "{config}"'
+                logger.log_message(success_message)
+        else:
+            os.makedirs(os.path.dirname(os.path.normpath(config)), exist_ok=True)
+            if os.path.isfile(config):
+                warning_message = f'This following config already exists, and will not be recreated: "{config}"'
+                logger.log_message(warning_message)
+                raise Warning(warning_message)
+            else:
+                new_config_path = os.path.normpath(f'{SCRIPT_DIR}/{config}')
+                shutil.copy(template_config, new_config_path)
+                success_message = f'This following config was created from the template config: "{new_config_path}"'
+                logger.log_message(success_message)
