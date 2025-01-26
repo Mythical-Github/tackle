@@ -9,7 +9,7 @@ download_links = ["https://github.com/Mythical-Github/tackle_box/raw/refs/heads/
 [dependency_config_structure.command]
 executable = "2022_VC_redist.x64.exe"
 executable_args = ["/install", "/quiet", "/norestart"]
-execution_method = ["wait"]
+execution_method = ["non_halting_wait"]
   
 [[dependency_config_structure.compatible_projects]]
 display_name = "Plutonium"

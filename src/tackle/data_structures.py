@@ -1,5 +1,12 @@
-from dataclasses import dataclass
+from enum import Enum
 from platform import platform
+from dataclasses import dataclass
+
+
+class ExecutionMode(Enum):
+    HALTING = 'halting' # akin to subprocess run
+    NON_HALTING = 'non_halting' # akin to subprocess Popen
+    NON_HALTING_WAIT = 'non_halting_wait' # akin to subprocess Popen with a wait after
 
 
 @dataclass
