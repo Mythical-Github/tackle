@@ -25,7 +25,8 @@ dependencies = [
   "rich",
   "click",
   "trogon",
-  "requests"
+  "requests",
+  "tomlkit"
 ]
 
 [project.urls]
