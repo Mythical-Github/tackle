@@ -25,7 +25,8 @@ dependencies = [
   "rich",
   "click",
   "requests",
-  "tomlkit"
+  "tomlkit",
+  "trogon"
 ]
 
 [project.urls]
@@ -63,8 +64,7 @@ dependencies = [
 
 [tool.hatch.envs.build.scripts]
 exe = [
-  "pyinstaller --noconfirm --onefile --console --name tackle --icon=assets/images/icons/project_main_icon.ico src/tackle/__main__.py",
-  "pyinstaller --noconfirm --onefile --console --name tackle_background --icon=assets/images/icons/project_main_icon.ico src/tackle/__main__.pyw"
+  "pyinstaller --noconfirm --onefile --hidden-import=textual.widgets._tab --console --name tackle --icon=assets/images/icons/project_main_icon.ico --collect-data trogon src/tackle/__main__.py"
 ]
 
 [tool.hatch.envs.scripts]
