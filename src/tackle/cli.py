@@ -1,12 +1,12 @@
 import click
-from trogon import tui
+# from trogon import tui
 
 from tackle import installer
 from tackle.file_io import SCRIPT_DIR
 from tackle.configs import generate_configs_from_template
 
 
-@tui()
+# @tui()
 @click.group()
 def cli():
     pass

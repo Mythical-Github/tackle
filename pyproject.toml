@@ -24,7 +24,6 @@ classifiers = [
 dependencies = [
   "rich",
   "click",
-  "trogon",
   "requests",
   "tomlkit"
 ]
@@ -64,8 +63,8 @@ dependencies = [
 
 [tool.hatch.envs.build.scripts]
 exe = [
-  "pyinstaller --noconfirm --onefile --console --name tackle --icon=assets/images/project_main_icon.ico src/tackle/__main__.py",
-  "pyinstaller --noconfirm --onefile --console --name tackle_background --icon=assets/images/project_main_icon.ico src/tackle/__main__.pyw"
+  "pyinstaller --noconfirm --onefile --console --name tackle --icon=assets/images/icons/project_main_icon.ico src/tackle/__main__.py",
+  "pyinstaller --noconfirm --onefile --console --name tackle_background --icon=assets/images/icons/project_main_icon.ico src/tackle/__main__.pyw"
 ]
 
 [tool.hatch.envs.scripts]
