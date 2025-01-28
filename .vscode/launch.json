@@ -39,6 +39,21 @@
                 "--configs",
                 "C:/Users/Mythical/Desktop/test.toml"
             ]
+        },
+        {
+            "name": "tackle_install_project_test",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "tackle",
+            "subProcess": true,
+            "console": "externalTerminal",
+            "args": [
+                "install_dependencies",
+                "--project_configs",
+                "${workspaceFolder}/assets/base/assets/configs/projects/call_of_duty/Plutonium.toml",
+                "--skip_tracking_installs",
+                "True"
+            ]
         }
     ]
 }

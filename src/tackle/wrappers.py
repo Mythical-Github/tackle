@@ -1,3 +1,3 @@
 
-def generate_wrappers():
+def generate_wrapper():
     return

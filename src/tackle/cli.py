@@ -36,7 +36,7 @@ def cli():
 )
 
 @click.option(
-    '--install_offline_packages',
+    '--offline_install_packages',
     default=[],
     help='A list of paths to offline installable packages generated from tackle to install.',
     multiple=True
@@ -49,7 +49,7 @@ def cli():
 )
 
 @click.option(
-    '--generate_wrappers',
+    '--generate_wrapper',
     default=False,
     help='Whether or not to create a wrapper to rerun the command that was generated from the CLI/TUI.'
 )
@@ -60,6 +60,12 @@ def cli():
     help='Whether or not to reinstall dependencies that already have been installed for this installation.'
 )
 
+@click.option(
+    '--skip_tracking_installs',
+    default=False,
+    help='Whether or not to skip tracking the installed dependencies through the hash config.'
+)
+
 
 def install_dependencies(
     project_configs: list[str],
@@ -67,8 +73,9 @@ def install_dependencies(
     dependencies_configs: list[str],
     offline_install_packages: list[str],
     create_offline_packages: list[str],
-    generate_wrappers: bool,
-    reinstall_dependencies: bool
+    generate_wrapper: bool,
+    reinstall_dependencies: bool,
+    skip_tracking_installs: bool
 ):
     installer.install_dependencies(
     project_configs,
@@ -76,8 +83,9 @@ def install_dependencies(
     dependencies_configs,
     offline_install_packages,
     create_offline_packages,
-    generate_wrappers,
-    reinstall_dependencies
+    generate_wrapper,
+    reinstall_dependencies,
+    skip_tracking_installs
 )
 
 
