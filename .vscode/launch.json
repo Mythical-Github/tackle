@@ -51,6 +51,8 @@
                 "install_dependencies",
                 "--project_configs",
                 "${workspaceFolder}/assets/base/assets/configs/projects/call_of_duty/Plutonium.toml",
+                "--reinstall_dependencies",
+                "True",
                 "--skip_tracking_installs",
                 "True"
             ]
