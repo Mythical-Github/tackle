@@ -171,3 +171,5 @@ cython_debug/
 .pypirc
 src/tackle/_version.py
 /src/tackle/assets
+assets/base/tackle_background.exe
+assets/base/tackle.exe
