@@ -117,7 +117,7 @@ def install_dependencies(
     dependency_configs: list[str],
     offline_install_packages: list[str],
     create_offline_packages: list[str],
-    generate_wrapper: bool,
+    wrapper_name: str,
     reinstall_dependencies: bool,
     skip_tracking_installs: bool
 ):
@@ -125,8 +125,7 @@ def install_dependencies(
         log.logger.log_message('warning that you no thing to be installed or created to be installed are being passed')
     if not len(project_configs) + len(game_configs) + len(dependency_configs) > 0 and create_offline_packages:
         log.logger.log_message('warning that you cannot create offline install packages without any configs being passed in')
-    if generate_wrapper:
-        wrappers.generate_wrapper()
+    wrappers.generate_wrapper(wrapper_name)
     if create_offline_packages:
         offline_packages.create_offline_packages(
             project_configs, 
