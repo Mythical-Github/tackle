@@ -9,6 +9,7 @@ download_links = ["https://download.microsoft.com/download/1/6/5/165255E7-1014-4
 [dependency_config_structure.command]
 executable = "vcredist_2010_x86.exe"
 executable_args = ["/Q"]
+executable_method = ["halting"]
 
 [[dependency_config_structure.compatible_projects]]
 display_name = "AlterWare"

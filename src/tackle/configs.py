@@ -106,7 +106,7 @@ def from_dependency_config_get_command(dependency_config: str) -> data_structure
         command = data_structures.Command(
             config_command['executable'], 
             config_command['executable_args'], 
-            config_command.get('execution_method', data_structures.ExecutionMethod.NON_HALTING_WAIT)
+            config_command['executable_method']
         )
     except Exception as e:
         raise RuntimeError(f"Error processing {dependency_config}: {e}")

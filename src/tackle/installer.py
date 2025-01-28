@@ -22,7 +22,7 @@ def turn_command_into_str(command: data_structures.Command) -> str:
 
 def run_command_halting(command):
     command_str = turn_command_into_str(command)
-    subprocess.run(command_str, shell=True, check=True, cwd=file_io.SCRIPT_DIR)
+    subprocess.run(command_str, shell=True, cwd=file_io.SCRIPT_DIR)
 
 
 def run_command_non_halting(command):
@@ -68,7 +68,7 @@ def install_dependency_from_hash(
     log.logger.log_message('Installing dependency from hash')
     config = configs.get_dependency_config_from_hash(hash)
     command = configs.from_dependency_config_get_command(config)
-    executable_method = command.execution_method
+    executable_method = data_structures.get_enum_from_val(data_structures.ExecutionMethod, command.executable_method[0])
     download_links = configs.from_dependency_config_get_download_links(config)
     sha_256_hash = configs.from_dependency_config_get_sha_256_hash(config)
     dependency = download_dependency(command.executable, sha_256_hash, download_links)
@@ -80,9 +80,14 @@ def install_dependency_from_hash(
         run_command_halting(command)
     elif executable_method == data_structures.ExecutionMethod.NON_HALTING:
         run_command_non_halting(command)
-    else:
+    elif executable_method == data_structures.ExecutionMethod.NON_HALTING_WAIT:
         run_command_non_halting_wait(command)
-
+    else:
+        error_message = f'There was no execution_method provided or it was invalid'
+        print(command.executable_method[0])
+        print(executable_method)
+        raise RuntimeError(error_message)
+    
 
 def install_dependencies_from_configs(
     project_configs: list[str],

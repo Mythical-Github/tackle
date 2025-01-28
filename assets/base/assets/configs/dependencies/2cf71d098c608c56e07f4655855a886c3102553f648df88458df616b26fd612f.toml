@@ -9,6 +9,7 @@ download_links = ["https://download.microsoft.com/download/1/7/1/1718CCC4-6315-4
 [dependency_config_structure.command]
 executable = "dxwebsetup.exe"
 executable_args = ["/Q"]
+executable_method = ["non_halting"]
 
 [[dependency_config_structure.compatible_projects]]
 display_name = "AlterWare"

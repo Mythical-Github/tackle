@@ -9,6 +9,7 @@ download_links = ["https://download.microsoft.com/download/8/B/4/8B42259F-5D70-4
 [dependency_config_structure.command]
 executable = "vcredist_2005_x86.exe"
 executable_args = ["/Q"]
+executable_method = ["halting"]
 
 [[dependency_config_structure.compatible_projects]]
 display_name = "Plutonium"

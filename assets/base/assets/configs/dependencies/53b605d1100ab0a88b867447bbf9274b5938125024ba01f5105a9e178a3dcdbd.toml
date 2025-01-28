@@ -9,6 +9,7 @@ download_links = ["https://github.com/Mythical-Github/tackle_box/raw/refs/heads/
 [dependency_config_structure.command]
 executable = "2013_x86.exe"
 executable_args = ["/install", "/quiet", "/norestart"]
+executable_method = ["halting"]
   
 [[dependency_config_structure.compatible_projects]]
 display_name = "Plutonium"

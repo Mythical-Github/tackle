@@ -9,7 +9,7 @@ download_links = ["https://github.com/Mythical-Github/tackle_box/raw/refs/heads/
 [dependency_config_structure.command]
 executable = "DirectX.exe"
 executable_args = ["/Q"]
-execution_method = ["non_halting_wait"]
+executable_method = ["non_halting_wait"]
   
 [[dependency_config_structure.compatible_projects]]
 display_name = "Plutonium"
