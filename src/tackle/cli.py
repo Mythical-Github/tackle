@@ -1,12 +1,12 @@
 import click
-# from trogon import tui
+from trogon import tui
 
 from tackle import installer
 from tackle.file_io import SCRIPT_DIR
 from tackle.configs import generate_configs_from_template
 
 
-# @tui()
+@tui()
 @click.group()
 def cli():
     pass
@@ -49,9 +49,9 @@ def cli():
 )
 
 @click.option(
-    '--generate_wrapper',
-    default=False,
-    help='Whether or not to create a wrapper to rerun the command that was generated from the CLI/TUI.'
+    '--wrapper_name',
+    default='wrapper',
+    help='The name of the generated wrapper, created from running a command via the CLI or TUI.'
 )
 
 @click.option(
@@ -73,7 +73,7 @@ def install_dependencies(
     dependencies_configs: list[str],
     offline_install_packages: list[str],
     create_offline_packages: list[str],
-    generate_wrapper: bool,
+    wrapper_name: str,
     reinstall_dependencies: bool,
     skip_tracking_installs: bool
 ):
@@ -83,7 +83,7 @@ def install_dependencies(
     dependencies_configs,
     offline_install_packages,
     create_offline_packages,
-    generate_wrapper,
+    wrapper_name,
     reinstall_dependencies,
     skip_tracking_installs
 )
