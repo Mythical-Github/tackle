@@ -4,16 +4,23 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-
         {
-            "name": "tackle_install_dependencies",
+            "name": "tackle_install_test",
             "type": "debugpy",
             "request": "launch",
             "module": "tackle",
             "subProcess": true,
             "console": "externalTerminal",
             "args": [
-                "install_dependencies"
+                "install_dependencies",
+                "--project_configs",
+                "${workspaceFolder}/assets/base/assets/configs/projects/call_of_duty/Plutonium.toml",
+                "--reinstall_dependencies",
+                "True",
+                "--skip_tracking_installs",
+                "True",
+                "--wrapper_name",
+                "example_wrapper_name"
             ]
         },
         {
@@ -37,24 +44,7 @@
             "args": [
                 "generate_dependency_configs",
                 "--configs",
-                "C:/Users/Mythical/Desktop/test.toml"
-            ]
-        },
-        {
-            "name": "tackle_install_project_test",
-            "type": "debugpy",
-            "request": "launch",
-            "module": "tackle",
-            "subProcess": true,
-            "console": "externalTerminal",
-            "args": [
-                "install_dependencies",
-                "--project_configs",
-                "${workspaceFolder}/assets/base/assets/configs/projects/call_of_duty/Plutonium.toml",
-                "--reinstall_dependencies",
-                "True",
-                "--skip_tracking_installs",
-                "True"
+                "${workspaceFolder}/dist/test.toml"
             ]
         }
     ]
