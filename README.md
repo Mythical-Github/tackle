@@ -25,11 +25,11 @@ Contributions are always appreciated, but please keep in mind the following:
 
 
 ### Technologies:
-- **[Trogon](https://github.com/Textualize/trogon)** - Easily turn your Click CLI into a powerful terminal application.
-- **[Hatch](https://github.com/pypa/hatch)** - Modern project management tool for Python.
 - **[UV](https://github.com/astral-sh/uv)** - An extremely fast Python package and project manager, written in Rust.
-- **[PyInstaller](https://github.com/pyinstaller/pyinstaller)** - Tool to convert Python programs into standalone executables.
 - **[Ruff](https://github.com/astral-sh/ruff)** - Fast Python linter and code formatting tool.
+- **[Hatch](https://github.com/pypa/hatch)** - Modern project management tool for Python.
+- **[Trogon](https://github.com/Textualize/trogon)** - Easily turn your Click CLI into a powerful terminal application.
+- **[PyInstaller](https://github.com/pyinstaller/pyinstaller)** - Tool to convert Python programs into standalone executables.
 - **[PyProjectDevTools](https://github.com/Mythical-Github/py_project_dev_tools)** - A set of generic tools for Python applications, using Hatch, UV, and PyInstaller.
 
 
