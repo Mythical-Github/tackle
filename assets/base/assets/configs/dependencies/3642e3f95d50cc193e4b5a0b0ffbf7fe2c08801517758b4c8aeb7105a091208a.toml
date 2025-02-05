@@ -2,9 +2,9 @@
 [dependency_config_structure]
 config_spec_version = 1.0
 config_version = 1.0
-display_name = "2022_VC_redist"
+display_name = "2022_VC_redist.x64.exe"
 sha_256_hash = "3642e3f95d50cc193e4b5a0b0ffbf7fe2c08801517758b4c8aeb7105a091208a"
-download_links = ["https://github.com/Mythical-Github/tackle_box/raw/refs/heads/main/redists/2022_VC_redist.exe"]
+download_links = ["https://raw.githubusercontent.com/Mythical-Github/tackle_box/refs/heads/main/redists/2022_VC_redist.x64.exe"]
 
 [dependency_config_structure.command]
 executable = "2022_VC_redist.x64.exe"

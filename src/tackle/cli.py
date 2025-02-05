@@ -36,10 +36,9 @@ def cli():
 )
 
 @click.option(
-    '--offline_install_packages',
-    default=[],
-    help='A list of paths to offline installable packages generated from tackle to install.',
-    multiple=True
+    '--offline_install',
+    default=False,
+    help='Whether or not to install the dependencies offline locally or not, without having downloaded them.'
 )
 
 @click.option(
@@ -66,26 +65,34 @@ def cli():
     help='Whether or not to skip tracking the installed dependencies through the hash config.'
 )
 
+@click.option(
+    '--skip_installation',
+    default=False,
+    help='Whether or not to skip installing the dependencies.'
+)
+
 
 def install_dependencies(
     project_configs: list[str],
     game_configs: list[str],
     dependencies_configs: list[str],
-    offline_install_packages: list[str],
+    offline_install: bool,
     create_offline_packages: list[str],
     wrapper_name: str,
     reinstall_dependencies: bool,
-    skip_tracking_installs: bool
+    skip_tracking_installs: bool,
+    skip_installation: bool
 ):
     installer.install_dependencies(
     project_configs,
     game_configs,
     dependencies_configs,
-    offline_install_packages,
+    offline_install,
     create_offline_packages,
     wrapper_name,
     reinstall_dependencies,
-    skip_tracking_installs
+    skip_tracking_installs,
+    skip_installation
 )
 
 

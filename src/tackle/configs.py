@@ -1,12 +1,14 @@
 import os
 import glob
 import shutil
+from itertools import chain
 
 import tomlkit
 
 from tackle import log
 from tackle import file_io
 from tackle import data_structures
+from tackle import configs, dependencies
 
 
 def get_dependency_config_from_hash(hash: str) -> str:
@@ -20,7 +22,7 @@ def get_dependency_config_from_hash(hash: str) -> str:
 
 def add_hash_to_install_tracker_config(hash: str):
     toml_path = get_install_tracker_config()
-    new_hash_list = get_hashes()
+    new_hash_list = get_hashes_of_already_installed()
     new_hash_list.append(hash)
 
     with open(toml_path, "r") as toml_file:
@@ -98,6 +100,7 @@ def from_dependency_config_get_download_links(dependency_config: str) -> list[st
 
 def from_dependency_config_get_command(dependency_config: str) -> data_structures.Command:
     try:
+        print(dependency_config)
         with open(dependency_config, 'r') as file:
             content = file.read()
         project_config = tomlkit.parse(content)
@@ -158,9 +161,10 @@ def get_config_to_game_names_from_game_configs(game_configs: list[str]) -> dict[
     return configs_to_game_names
 
 
-def get_project_names_from_project_configs(project_configs: list[str]) -> dict[str, str]:
+def get_project_configs_to_project_names(project_configs: list[str]) -> dict[str, str]:
     configs_to_project_names = {}
     for project_config_path in project_configs:
+        print(project_config_path)
         try:
             with open(project_config_path, 'r') as file:
                 content = file.read()
@@ -173,6 +177,7 @@ def get_project_names_from_project_configs(project_configs: list[str]) -> dict[s
             raise KeyError(f"Missing required key {e} in config: {project_config_path}")
         except Exception as e:
             raise RuntimeError(f"Error processing {project_config_path}: {e}")
+        print(configs_to_project_names)
     return configs_to_project_names
 
 
@@ -240,7 +245,7 @@ def get_config_spec_version() -> float:
     return dependency_config.get("config_spec_version")
 
 
-def get_config_version():
+def get_config_version() -> float:
     toml_path = get_install_tracker_config()
 
     with open(toml_path, "r") as toml_file:
@@ -250,7 +255,7 @@ def get_config_version():
     return dependency_config.get("config_version")
 
 
-def get_hashes() -> list[str]:
+def get_hashes_of_already_installed() -> list[str]:
     toml_path = get_install_tracker_config()
 
     with open(toml_path, "r") as toml_file:
@@ -268,3 +273,24 @@ def get_current_config_spec_version() -> float:
 
 def get_current_config_version() -> float:
     return 1.0
+
+
+def from_project_config_get_dependency_configs(config: str) -> list[str]:
+    dependency_configs = []
+    project_names = configs.get_project_configs_to_project_names([config]).values()
+    new_project_names = []
+    for entry in project_names:
+        new_project_names.append(entry)
+    dependency_hashes = list(chain.from_iterable(dependencies.get_project_names_to_dependency_hash_lists(new_project_names).values()))
+    for hash in dependency_hashes:
+        dependency_configs.append(configs.get_dependency_config_from_hash(hash))
+    return dependency_configs
+
+
+def from_game_config_get_dependency_configs(config: str) -> list[str]:
+    dependency_configs = []
+    game_names = configs.get_config_to_game_names_from_game_configs([config]).values()
+    dependency_hashes = list(chain.from_iterable(dependencies.get_game_names_to_dependency_hash_lists(game_names).values()))
+    for hash in dependency_hashes:
+        dependency_configs.append(configs.get_dependency_config_from_hash(hash))
+    return dependency_configs

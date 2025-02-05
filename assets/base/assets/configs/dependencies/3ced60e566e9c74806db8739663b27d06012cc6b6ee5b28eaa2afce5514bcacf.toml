@@ -2,12 +2,12 @@
 [dependency_config_structure]
 config_spec_version = 1.0
 config_version = 1.0
-display_name = "2010_x64"
+display_name = "2010_x64.exe"
 sha_256_hash = "3ced60e566e9c74806db8739663b27d06012cc6b6ee5b28eaa2afce5514bcacf"
 download_links = ["https://github.com/Mythical-Github/tackle_box/raw/refs/heads/main/redists/2010_x64.exe"]
 
 [dependency_config_structure.command]
-executable = "2010_x64"
+executable = "2010_x64.exe"
 executable_args = ["/install", "/quiet", "/norestart"]
 executable_method = ["halting"]
   

@@ -1,36 +1,7 @@
-cli options
-        create an offline installable package
-        takes in list of specific dependencies to install
-        takes in list of game names
-        takes in list of projects names
-        takes in a list of offline packages to install
-        reinstall option
-        generate new dependency folder setup
-        gen new project configs
-        gen new game configs
-        generate wrapper
+
 
 To Do:
-    install dependencies for a specific game
-    install dependencies for all games on a specific client/project
-    offline install options (create offline installer)
-    logging
-    progress bars
-    exe takes in a list of clients/projects and or a list of games
-    track ones already installed, with an optional param to install anyways
+    offline installer does not actually install offline packages, does online right now
+    test installing via dependency configs being passed
+    tets installing via game configs being passed
 
-
-Later:
-
-
-Maybes:
-    new toml entry generator
-    sh/bat generation from tui
-    dynamically populated entries
-    check if hash exists already and output information if it does
-
-
-each folder should have 
-    a toml file
-    folder called dependencies for executables like redists
-    folder called scripts for hooks

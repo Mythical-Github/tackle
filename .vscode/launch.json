@@ -20,7 +20,11 @@
                 "--skip_tracking_installs",
                 "True",
                 "--wrapper_name",
-                "example_wrapper_name"
+                "tackle_plutonium",
+                "--create_offline_packages",
+                "True",
+                // "--skip_installation",
+                // "True"
             ]
         },
         {

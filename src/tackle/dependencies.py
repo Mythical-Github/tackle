@@ -4,7 +4,7 @@ from tackle import configs
 
 
 def has_dependency_already_been_installed(hash: str) -> bool:
-    return hash in configs.get_hashes()
+    return hash in configs.get_hashes_of_already_installed()
 
 
 def get_project_names_to_dependency_hash_lists(project_names: list[str]) -> dict[str, list[str]]:
