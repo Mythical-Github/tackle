@@ -23,8 +23,77 @@
                 "tackle_plutonium",
                 "--create_offline_packages",
                 "True",
-                // "--skip_installation",
-                // "True"
+                "--skip_installation",
+                "True"
+            ]
+        },
+        {
+            "name": "tackle_create_alterware_package",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "tackle",
+            "subProcess": true,
+            "console": "externalTerminal",
+            "args": [
+                "install_dependencies",
+                "--project_configs",
+                "${workspaceFolder}/assets/base/assets/configs/projects/call_of_duty/AlterWare.toml",
+                "--reinstall_dependencies",
+                "True",
+                "--skip_tracking_installs",
+                "True",
+                "--wrapper_name",
+                "tackle_alterware",
+                "--create_offline_packages",
+                "True",
+                "--skip_installation",
+                "True"
+            ]
+        },
+        {
+            "name": "tackle_create_plutonium_package",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "tackle",
+            "subProcess": true,
+            "console": "externalTerminal",
+            "args": [
+                "install_dependencies",
+                "--project_configs",
+                "${workspaceFolder}/assets/base/assets/configs/projects/call_of_duty/Plutonium.toml",
+                "--reinstall_dependencies",
+                "True",
+                "--skip_tracking_installs",
+                "True",
+                "--wrapper_name",
+                "tackle_plutonium",
+                "--create_offline_packages",
+                "True",
+                "--skip_installation",
+                "True"
+            ]
+        },
+        {
+            "name": "tackle_create_aurora_package",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "tackle",
+            "subProcess": true,
+            "console": "externalTerminal",
+            "args": [
+                "install_dependencies",
+                "--project_configs",
+                "${workspaceFolder}/assets/base/assets/configs/projects/call_of_duty/Aurora.toml",
+                "--reinstall_dependencies",
+                "True",
+                "--skip_tracking_installs",
+                "True",
+                "--wrapper_name",
+                "tackle_aurora",
+                "--create_offline_packages",
+                "True",
+                "--skip_installation",
+                "True"
             ]
         },
         {
