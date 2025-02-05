@@ -1,5 +1,5 @@
 # tackle
-A work in progress cli tool, that is a config driven dependency installer, with hash checking, fallbacks, tui (text based ui), and offline installer options.
+A config driven dependency installer, with hash checking, fallbacks, tui (text based ui), and offline installer options.
 
 ### Join the Discord
 If you have any problems, suggestions, or just want to chat, feel free to join the [Discord](https://discord.gg/EvUuAD4QvS)
